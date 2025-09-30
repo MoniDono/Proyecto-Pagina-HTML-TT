@@ -392,3 +392,50 @@ textarea {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Para pantallas de hasta 768px (tablets y celulares) */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;   /* Una sola columna */
+    grid-template-rows: auto;     /* Altura automática */
+  }
+
+  .header {
+    flex-direction: column;  /* Logo y menú uno debajo del otro */
+    gap: 10px;
+  }
+
+  .header_nav ul {
+    flex-direction: column; /* Menú en columna */
+    gap: 8px;
+  }
+
+  .contenedor-tarjetas {
+    flex-direction: column; /* Productos en columna */
+    align-items: center;
+  }
+
+  .tarjeta-producto {
+    width: 90%; /* Ocupan más ancho en móvil */
+    max-width: 30rem;
+  }
+
+  .tarjetas-aside {
+    width: 100%;
+  }
+
+  .tarjeta-aside {
+    width: 90%;
+    max-width: 25rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
