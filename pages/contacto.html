@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <!--fontawesome enlace -->
+    <script src="https://kit.fontawesome.com/ad5c5df7d9.js" crossorigin="anonymous"></script>
+</head>
+<body class="contacto-page">
+  <div class="contacto-container">
+    <header class="header">
+       <!-- Logo -->
+      <a href="../index.html" class="header_logo">
+        <img src="../img/logo.png" alt="Logo">
+      </a>
+       <!-- Navegación -->
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../index.html">⬅ Home</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="seccion-contacto">
+        <h2 class="titulo-contacto">Contacto</h2>
+        <form class="form" action="https://formspree.io/f/xpwjoaoz" method="POST">
+          <div class="campo-form">
+            <label for="email">Correo:</label>
+            <input id="email" type="email" name="email"/>
+          </div>
+          <div class="campo-form">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+          <input type="hidden" name="subject" value="Nuevo contacto desde tu página"/>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Diseño de página: MD</p>
+      <nav>
+        <ul>
+          <li>Seguinos en:</li>
+          <li><i class="fa-brands fa-facebook"></i>Facebook</li>
+          <li><i class="fa-brands fa-instagram"></i>Instagram</li>
+          <li><i class="fa-brands fa-tiktok"></i>TikTok</li>
+          <li><i class="fa-brands fa-x"></i>X</li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+</body>
