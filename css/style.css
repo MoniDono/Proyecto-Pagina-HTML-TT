@@ -87,7 +87,12 @@ body {
   padding: 1rem;
 }
 
-
+.header_nav a:hover {
+  background: rgb(54, 98, 163);
+    color: white;
+  border-radius: 0.5rem;
+}
+    
 
 /*---------------------------------------------------*/
 /*                        HOME                       */
@@ -335,7 +340,6 @@ nav ul {
   min-height: 100vh; 
 }
 
-/* Main ocupa el espacio disponible */
 .contacto-page main {
   flex: 1;
 }
@@ -397,8 +401,8 @@ textarea {
       "main"
       "aside"
       "footer";
-    grid-template-columns: 1fr;   /* Una sola columna */
-    grid-template-rows: auto;     /* Altura automática */
+    grid-template-columns: 1fr;   
+    grid-template-rows: auto;   
   }
 
  .header {
@@ -460,13 +464,10 @@ textarea {
   }
 
   .tarjeta-producto {
-    width: 90%; /* Ocupan más ancho en móvil */
+    width: 90%;
     max-width: 30rem;
   }
 
-  .tarjetas-aside {
-    width: 100%;
-  }
 
   .tarjeta-aside {
     width: 90%;
