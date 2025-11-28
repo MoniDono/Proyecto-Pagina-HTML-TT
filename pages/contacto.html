@@ -1,65 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
-    <!--fontawesome enlace -->
-    <script src="https://kit.fontawesome.com/ad5c5df7d9.js" crossorigin="anonymous"></script>
-</head>
-<body class="contacto-page">
-  <div class="contacto-container">
-    <header class="header">
-       <!-- Logo -->
-      <a href="../index.html" class="header_logo">
-        <img src="../img/logo.png" alt="Logo">
-      </a>
-       <!-- Navegación -->
-      <nav class="header_nav">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <section class="seccion-contacto">
-        <h2 class="titulo-contacto">Contacto</h2>
-        <form class="form" action="https://formspree.io/f/xpwjoaoz" method="POST">
-          <div class="campo-form">
-            <label for="email">Nombre:</label>
-            <input id="email" type="email" name="email"/>
-          </div>
-          <div class="campo-form">
-            <label for="email">Correo:</label>
-            <input id="email" type="email" name="email"/>
-          </div>
-          <div class="campo-form">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-          </div>
-          <input type="hidden" name="subject" value="Nuevo contacto desde tu página"/>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
+    <title>Contacto - Tienda</title>
 
-    <footer class="footer">
-      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-      <nav>
-        <ul>
-          <li>Seguinos en:</li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-x"></i></li>
-        </ul>
-      </nav>
-    </footer>
-  </div>
-</body>
+    <script
+      src="https://kit.fontawesome.com/ad5c5df7d9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="contacto-page">
+    <div class="grid-container">
+      <header class="header">
+        <a href="../index.html" class="header_logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </a>
+
+        <nav class="header_nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./contacto.html" class="activo">Contacto</a></li>
+            <li>
+              <a href="./carrito.html" class="carrito-icono">
+                🛒 <span id="contador-carrito">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="seccion-contacto">
+          <h2 class="titulo-contacto">Contacto</h2>
+
+          <p class="parrafo-contacto">
+            ¿Tenés preguntas sobre talles, envíos o cambios? Escribinos y te
+            respondemos a la brevedad 💌
+          </p>
+
+          <form
+            class="form"
+            action="https://formspree.io/f/xpwjoaoz"
+            method="POST"
+          >
+            <div class="campo-form">
+              <label for="nombre">Nombre:</label>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+
+            <div class="campo-form">
+              <label for="email">Correo:</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="tunombre@email.com"
+                required
+              />
+            </div>
+
+            <div class="campo-form">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="¿En qué podemos ayudarte?"
+                required
+              ></textarea>
+            </div>
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Nuevo contacto desde tu página"
+            />
+
+            <button type="submit" class="btn-carrito btn-enviar-contacto">
+              ✉️ Enviar
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+
+        <nav>
+          <ul>
+            <li>Seguinos en:</li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-x"></i></li>
+          </ul>
+        </nav>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <script src="../js/contacto.js" type="module"></script>
+    </div>
+  </body>
+</html>
